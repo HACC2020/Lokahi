@@ -26,6 +26,9 @@ A copy of the kfunctions.php file will be uploaded to github.
 
 In all this project took around 40 hours, most of that being creating the individual charts and graphs, followed by the installation of the core software components.
 
+Judges that would like to see the backend process of creating graphs and modifying the website can contact me via slack or email.  The site is publicly accessable here:
+http://35.188.55.118/HACC/index.php
+
 Below are the steps needed to recreate this system.
 Steps to create the visualization system.
 
