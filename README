@@ -1,13 +1,26 @@
 Team Lokahi
-From the beginning, it was apparent that creating a visualization system for the Office of Enterprise Technology Services was a project much too large to code within such a short period of time.  Also there are so many great projects that already exist and will easily fulfill the requirement set forth by the organization.  Therefore, I decided to use open source software to build a visualization system.
+From the beginning, it was apparent that creating a visualization system for the Office of Enterprise Technology Services was a project much too 
+large to code within such a short period of time.  Also there are so many great projects that already exist and will easily fulfill the requirement 
+set forth by the organization.  Therefore, I decided to use open source software to build a visualization system.
 
-The largest challenge for me personally in this project is displaying the information in meaningful ways, this is in part due to my personal lack of creative thinking abilities, but also due to the nature of the data, most of this data, to be useful just needs to be displayed in a list format, at least that is my opinion.
+The largest challenge for me personally in this project is displaying the information in meaningful ways, this is in part due to my personal lack of 
+creative thinking abilities, but also due to the nature of the data, most of this data, to be useful just needs to be displayed in a list format, at 
+least that is my opinion.
 
-The system consists of a Ubuntu LAMP (Linux, Apache, MySQL, PHP) server hosted on Google Cloud Platform.  An open source data visualization tool, Metabase was also installed, as well as couchCMS for building the web interface for users.  The idea is that state admins can log into Metabase, create charts, graphs, almost any type of visualization with powerful filtering and summarizing tools.  The charts are then shared via a link or by embedding them in an iframe.  Using couchCMS, we are able to create a page that has “live” graphics, meaning as the data changes in the database, the charts are automatically updated on the website.  End users are able to access the website via a web browser with no login required.
+The system consists of a Ubuntu LAMP (Linux, Apache, MySQL, PHP) server hosted on Google Cloud Platform.  An open source data visualization tool, 
+Metabase was also installed, as well as couchCMS for building the web interface for users.  The idea is that state admins can log into Metabase, 
+create charts, graphs, almost any type of visualization with powerful filtering and summarizing tools.  The charts are then shared via a link or 
+by embedding them in an iframe.  Using couchCMS, we are able to create a page that has “live” graphics, meaning as the data changes in the database, 
+the charts are automatically updated on the website.  End users are able to access the website via a web browser with no login required.
 
-There are some improvements that I would implement if I were deploying this system live.  Firstly I would force all the various web components to use https, at this time some are still http.  Secondly, I would tie Metabase directly to the database of the project management system that the state currently uses, exporting and importing as csv is time consuming and brings potential for errors.
+There are some improvements that I would implement if I were deploying this system live.  Firstly I would force all the various web components to use 
+https, at this time some are still http.  Secondly, I would tie Metabase directly to the database of the project management system that the state currently 
+uses, exporting and importing as csv is time consuming and brings potential for errors.
 
-The only customization that I need to perform to this system was to create a function for couchCMS to interpret iframe links and display them.  This was accomplished by creating a kfunctions.php file in the couch/addons directory.  This file is then referenced when the page is being built by couchCMS.  If there is an iframe reference with the correct opening tag”[“ couchCMS will then create the iframe and populate it with the src from the iframe.  This is an example of a formatted iframe link for couchCMS:
+The only customization that I need to perform to this system was to create a function for couchCMS to interpret iframe links and display them.  This was 
+accomplished by creating a kfunctions.php file in the couch/addons directory.  This file is then referenced when the page is being built by couchCMS.  If 
+there is an iframe reference with the correct opening tag”[“ couchCMS will then create the iframe and populate it with the src from the iframe.  This is an 
+example of a formatted iframe link for couchCMS:
 [iframe src="https://google.com" frameborder="0" width="850" height="500" allowtransparency]
 A copy of the kfunctions.php file will be uploaded to github.
 
