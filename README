@@ -11,6 +11,8 @@ The only customization that I need to perform to this system was to create a fun
 [iframe src="https://google.com" frameborder="0" width="850" height="500" allowtransparency]
 A copy of the kfunctions.php file will be uploaded to github.
 
+In all this project took around 40 hours, most of that being creating the individual charts and graphs, followed by the installation of the core software components.
+
 Below are the steps needed to recreate this system.
 Steps to create the visualization system.
 
