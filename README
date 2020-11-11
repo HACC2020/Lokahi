@@ -27,8 +27,8 @@ will then create the iframe and populate it with the src from the iframe.  This 
 [iframe src="https://google.com" frameborder="0" width="850" height="500" allowtransparency]
 A copy of the kfunctions.php file will be uploaded to github.
 
-In all this project took around 40 hours, most of that being creating the individual charts and graphs, followed by the installation 
-of the core software components.
+In all this project took around 40 hours, most of that being creating the individual charts and graphs, followed by the 
+installation of the core software components.
 
 Judges that would like to see the backend process of creating graphs and modifying the website can contact me via slack or email.  
 The site is publicly accessable here:
